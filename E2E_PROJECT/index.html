@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Space Invaders</title>
+    <link rel="stylesheet" href="space.css">
+</head>
+<body>
+<video id="board-background" autoplay loop muted>
+    <source src="board_bg.mp4" type="video/mp4">
+    <!-- Add more <source> elements for different video formats if needed -->
+</video>
+
+<div id="start-screen">
+    <input type="text" id="playerName" placeholder="Enter your name" required>
+    <button id="start-game-button">Start Game</button>
+</div>
+<div id="game-over-screen" style="display: none;">
+    <p id="game-over-message">Game Over!</p>
+    <p id="game-over-name"></p>
+    <p id="game-over-score"></p>
+    <button id="game-over-restart-button">Restart Game</button>
+</div>
+
+<div id="victory-screen" style="display: none;">
+    <p id="victory-message">You Won the Game!</p>
+    <p id="victory-score"></p>
+    <button id="victory-restart-button">Restart Game</button>
+</div>
+
+<canvas id="board"></canvas>
+<script src="space.js"></script>
+</body>
+</html>
